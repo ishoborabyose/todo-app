@@ -31,8 +31,11 @@ const Todo = () => {
 
   return (
     <div className="max-w-3xl mx-auto py-11 px-4">
+      <h1 className="text-[#ECECEC] my-9 text-9xl font-normal text-center">
+        todos
+      </h1>
       <form
-        className="flex rounded-full justify-between shadow-lg  "
+        className="flex rounded-full justify-between shadow-box"
         onSubmit={handleNewTodoAdd}
       >
         <input
