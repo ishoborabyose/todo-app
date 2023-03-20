@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { GrAddCircle } from "react-icons/gr";
-import { MdDelete } from "react-icons/md";
+import { MdDelete, MdAddCircle } from "react-icons/md";
 
 const Todo = () => {
   const [todos, setTodos] = useState([]);
@@ -44,12 +43,12 @@ const Todo = () => {
           placeholder="Add todo..."
         />
         <button className="pr-5" type="submit">
-          <GrAddCircle className="" />
+          <MdAddCircle className="text-[#61C7C6] w-7 h-10" />
         </button>
       </form>
-      <ul>
+      <div>
         {todos.map((todo, index) => (
-          <li key={index} className="pt-8 border-b-2">
+          <div key={index} className="pt-8 border-b-2">
             <input
               className="mr-2"
               type="checkbox"
@@ -67,9 +66,9 @@ const Todo = () => {
             >
               <MdDelete className="text-red-500 bg-[#f2f3f5]  rounded-full p-[2px] h-6 w-6" />
             </button>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
