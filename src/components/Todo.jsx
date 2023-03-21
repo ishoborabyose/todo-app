@@ -5,6 +5,7 @@ const Todo = () => {
   const [todos, setTodos] = useState([]);
   const [newTodo, setNewTodo] = useState("");
 
+  console.log(newTodo);
   const handleNewTodoChange = (event) => {
     setNewTodo(event.target.value);
   };
